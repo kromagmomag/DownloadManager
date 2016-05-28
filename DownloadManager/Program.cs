@@ -10,6 +10,7 @@ namespace DownloadManager
     {
         /// <summary>
         /// The main entry point for the application.
+        /// Single Threaded Apartment-Architecture Thread.
         /// </summary>
         [STAThread]
         static void Main()

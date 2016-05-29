@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.DownloadButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.lblProgress = new System.Windows.Forms.Label();
+            this.prgDownload = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // PathTextBox
@@ -78,6 +78,7 @@
             this.DownloadButton.TabIndex = 4;
             this.DownloadButton.Text = "&Download";
             this.DownloadButton.UseVisualStyleBackColor = true;
+            this.DownloadButton.Click += new System.EventHandler(this.DownloadButton_Click);
             // 
             // StopButton
             // 
@@ -87,31 +88,32 @@
             this.StopButton.TabIndex = 5;
             this.StopButton.Text = "&Stop";
             this.StopButton.UseVisualStyleBackColor = true;
+            this.StopButton.Click += new System.EventHandler(this.StopButton_Click);
             // 
-            // label3
+            // lblProgress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 18);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Awaiting Download...";
+            this.lblProgress.AutoSize = true;
+            this.lblProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgress.Location = new System.Drawing.Point(12, 109);
+            this.lblProgress.Name = "lblProgress";
+            this.lblProgress.Size = new System.Drawing.Size(145, 18);
+            this.lblProgress.TabIndex = 6;
+            this.lblProgress.Text = "Awaiting Download...";
             // 
-            // progressBar1
+            // prgDownload
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 130);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(498, 23);
-            this.progressBar1.TabIndex = 7;
+            this.prgDownload.Location = new System.Drawing.Point(12, 130);
+            this.prgDownload.Name = "prgDownload";
+            this.prgDownload.Size = new System.Drawing.Size(498, 23);
+            this.prgDownload.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 163);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.prgDownload);
+            this.Controls.Add(this.lblProgress);
             this.Controls.Add(this.StopButton);
             this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.label2);
@@ -133,8 +135,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button DownloadButton;
         private System.Windows.Forms.Button StopButton;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblProgress;
+        private System.Windows.Forms.ProgressBar prgDownload;
     }
 }
 
